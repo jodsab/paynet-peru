@@ -1,0 +1,55 @@
+@import "../resources/globalStyles/colors.scss";
+
+.home_container {
+  h1 {
+    font-size: 35px;
+  }
+  .subtitle {
+    font-size: 40px;
+  }
+  .buttons {
+    display: flex;
+    gap: 45px;
+    button {
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+    .primary_login {
+      background-color: $secondary;
+      color: white;
+      cursor: pointer;
+    }
+    .secondary_contact {
+      background-color: transparent;
+      border: 1px solid $primary;
+    }
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .sub {
+      font-size: 56px;
+    }
+  }
+  .areas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    .area {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 20px;
+      .suba {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        h6 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

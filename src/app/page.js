@@ -1,95 +1,102 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import WithBorder from "@/HOC/withBorder";
+import NavBar from "@/components/Navbar";
+import stadistics from "./assets/stadistics.png";
+import versatil from "./assets/versatil.png";
+import seguro from "./assets/seguro.png";
+import comodo from "./assets/comodo.png";
+import accesible from "./assets/accesible.png";
+import WithNavAndFooter from "@/HOC/withNavAndFooter";
+import "./index.scss";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <WithNavAndFooter>
+        <div className="home_container">
+          <div className="home_content margin">
+            <h1>TRANSACCIONES DIRECTAS EN LA PALMA DE TU MANO</h1>
+            <WithBorder>
+              <p className="subtitle">Pagos fáciles y seguros</p>
+              <div className="buttons">
+                <button className="primary_login">Iniciar sesión</button>
+                <button className="secondary_contact">Contacto</button>
+              </div>
+            </WithBorder>
+            <WithBorder>
+              <div className="benefits">
+                <h3 className="sub">BENEFICIOS DISEÑADOS PARA TI</h3>
+                <Image
+                  height={280}
+                  width={280}
+                  src={stadistics}
+                  alt="Estadisticas"
+                />
+              </div>
+              <div className="areas">
+                <div className="area">
+                  <div className="suba">
+                    <Image
+                      width={50}
+                      height={50}
+                      src={versatil}
+                      alt="versatil"
+                    />
+                    <h6>VERSÁTIL</h6>
+                  </div>
+                  <div>
+                    <p>
+                      PayNet ofrece flexibilidad con su diversa red de bancos y
+                      sistemas de pago.
+                    </p>
+                  </div>
+                </div>
+                <div className="area">
+                  <div className="suba">
+                    <Image width={50} height={50} src={seguro} alt="seguro" />
+                    <h6>SEGURO</h6>
+                  </div>
+                  <div>
+                    <p>
+                      Seguridad avanzada como la validación biométrica y
+                      protocolos de PLAFT.
+                    </p>
+                  </div>
+                </div>
+                <div className="area">
+                  <div className="suba">
+                    <Image width={50} height={50} src={comodo} alt="comodo" />
+                    <h6>CÓMODO</h6>
+                  </div>
+                  <div>
+                    <p>
+                      Realiza transacciones fácilmente con PayNet, en cualquier
+                      momento y lugar.
+                    </p>
+                  </div>
+                </div>
+                <div className="area">
+                  <div className="suba">
+                    <Image
+                      width={50}
+                      height={50}
+                      src={accesible}
+                      alt="accesible"
+                    />
+                    <h6>ACCESIBLE</h6>
+                  </div>
+                  <div>
+                    <p>
+                      Accede a PayNet desde cualquier dispositivo - tabletas,
+                      celulares y PCs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </WithBorder>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </WithNavAndFooter>
     </main>
   );
 }

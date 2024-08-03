@@ -1,0 +1,7 @@
+@import "../../resources/globalStyles/colors.scss";
+
+.border {
+  border: 2px solid $primary;
+  border-radius: 15px;
+  padding: 25px;
+}

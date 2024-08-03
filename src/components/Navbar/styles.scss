@@ -1,0 +1,25 @@
+.navbar_container {
+  .navbar_header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toggle_menu {
+    display: flex;
+    flex-direction: column;
+    .extra_menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .close {
+      height: 0;
+      background-color: blue;
+    }
+
+    & .open {
+      height: 100%;
+      background-color: red;
+    }
+  }
+}
