@@ -1,0 +1,90 @@
+@use "../../resources/globalStyles/mediaQueries.scss" as *;
+
+.footer--main--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  background: linear-gradient(to right, #4dd4ff 0%, #154979 100%);
+  padding: 20px 30px;
+  .title-fake {
+    display: none;
+  }
+  .footer--about--us--container {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    li {
+      .footer--social--links--container {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+        margin-top: 5px;
+        li {
+          svg {
+            font-size: 30px;
+            color: white;
+          }
+        }
+      }
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2 {
+          color: white;
+        }
+      }
+      strong {
+        color: white;
+      }
+      p {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .footer--main--container {
+    align-items: center;
+    .footer--about--us--container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      flex-direction: column-reverse;
+      li {
+        &:first-child {
+          grid-row: 1/4;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .footer--main--container {
+    align-items: baseline;
+    .title-fake {
+      display: block;
+      color: white;
+    }
+    .footer--about--us--container {
+      display: flex;
+      flex-direction: column-reverse;
+      li {
+        &:first-child {
+          h2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
