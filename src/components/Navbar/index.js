@@ -21,7 +21,7 @@ const NavBar = () => {
     <div className="navbar_wrapper">
       <div className="navbar_container">
         <div className="navbar_header margin">
-          <h4>PAYNET</h4>
+          <h4 className="logo">PAYNET</h4>
           <button className="toggle_menu_button" onClick={toggleMenu}>
             {openMenu ? (
               <IoCloseOutline size={35} color="#014b8e" />
