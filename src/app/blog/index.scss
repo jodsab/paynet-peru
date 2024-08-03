@@ -1,59 +1,113 @@
-@import "../resources/globalStyles/colors.scss";
-
-.home_container {
-  h1 {
-    color: $primary;
-    font-size: 35px;
-  }
-  .subtitle {
-    font-size: 40px;
-    color: $primary;
-  }
-  .buttons {
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+.blog--main--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f6f9;
+  padding: 50px 0;
+  .blog--main--content--container {
     display: flex;
-    gap: 45px;
-    button {
-      padding: 6px 12px;
-      border-radius: 8px;
-    }
-    .primary_login {
-      background-color: $secondary;
-      color: white;
-      cursor: pointer;
-    }
-    .secondary_contact {
-      background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .blog--banner {
+      display: flex;
+      max-width: 1000px;
       border: 1px solid $primary;
-      color: $primary;
-    }
-  }
-
-  .benefits {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .sub {
-      font-size: 56px;
-      color: $primary;
-    }
-  }
-  .areas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    .area {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 20px;
+      justify-content: center;
       border-radius: 20px;
-      .suba {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        h6 {
-          color: $primary;
-          font-size: 24px;
+      padding: 0 50px;
+      align-items: center;
+
+      .blog--banner--left {
+        p {
+          font-size: 20px;
         }
+        .blog--banner--buttons {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+    .blog--news--lists {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+    .blog--news--pagination {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      ul {
+        display: flex;
+        gap: 20px;
+        li {
+          padding: 5px;
+          display: flex;
+          width: 20px;
+          aspect-ratio: 1/1;
+          border-radius: 5px;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          cursor: pointer;
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+          &.active {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+      p {
+        transition: all 0.2s;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $tablet) {
+  .blog--main--container {
+    .blog--main--content--container {
+      .blog--banner {
+        padding: 20px;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $mobile) {
+  .blog--main--container {
+    .blog--main--content--container {
+      .blog--banner {
+        padding: 20px;
+        .blog--banner--left {
+          p {
+            font-size: 16px;
+          }
+        }
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .blog--news--pagination {
+        flex-direction: column;
+        gap: 0;
       }
     }
   }

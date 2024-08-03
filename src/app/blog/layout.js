@@ -1,16 +1,16 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.scss";
+// import "./globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const larsseit = localFont({
-  src: "../resources/fonts/larsseit/Larsseit-Bold.woff2",
+  src: "../../resources/fonts/larsseit/Larsseit-Bold.woff2",
   display: "swap",
 });
 
 const urbanist = localFont({
-  src: "../resources/fonts/urbanist/Urbanist-Regular.woff2",
+  src: "../../resources/fonts/urbanist/Urbanist-Regular.woff2",
   display: "swap",
 });
 
