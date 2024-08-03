@@ -1,59 +1,200 @@
-@import "../resources/globalStyles/colors.scss";
-
-.home_container {
-  h1 {
-    color: $primary;
-    font-size: 35px;
-  }
-  .subtitle {
-    font-size: 40px;
-    color: $primary;
-  }
-  .buttons {
-    display: flex;
-    gap: 45px;
-    button {
-      padding: 6px 12px;
-      border-radius: 8px;
-    }
-    .primary_login {
-      background-color: $secondary;
-      color: white;
-      cursor: pointer;
-    }
-    .secondary_contact {
-      background-color: transparent;
-      border: 1px solid $primary;
-      color: $primary;
-    }
-  }
-
-  .benefits {
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+.function--container {
+  background-color: #f2f6f9;
+  .function--container--content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    .sub {
-      font-size: 56px;
-      color: $primary;
-    }
-  }
-  .areas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    .area {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      border-radius: 20px;
-      .suba {
+    padding: 40px 0;
+    gap: 50px;
+    .banner--container {
+      background-color: rgba(#52adeb, 0.2);
+      display: flex;
+      width: 100%;
+      align-self: center;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      img {
+        transform: scale(1.2);
+      }
+      .banner--left--container {
         display: flex;
-        align-items: center;
-        gap: 15px;
-        h6 {
-          color: $primary;
-          font-size: 24px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+        justify-content: space-between;
+        .banner--buttons--container {
+          display: flex;
+          gap: 10px;
         }
+      }
+    }
+    .how--container {
+      padding: 50px;
+      background-color: white;
+      border-radius: 10px;
+      .how--slide--container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: max-content;
+        .option {
+          padding: 10px;
+          background-color: rgba(#52adeb, 0.2);
+          display: flex;
+          justify-content: center;
+          color: $primary;
+          cursor: pointer;
+          &:first-of-type {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+          &:last-of-type {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          &.active {
+            background-color: $secondary;
+            color: white;
+          }
+        }
+      }
+      .how--steps--container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        .how--step--container {
+          display: flex;
+          flex-direction: column-reverse;
+          padding-top: 30px;
+
+          gap: 40px;
+          img {
+            width: 100%;
+          }
+          .how--step--layout {
+            flex: 1;
+            strong {
+              font-size: 40px;
+              text-transform: uppercase;
+            }
+            p {
+              font-size: 25px;
+            }
+            .how--step--buttons {
+              display: flex;
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+    .function--help {
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .function--form--contact--us {
+      display: flex;
+
+      justify-content: center;
+      position: relative;
+      .form--hero--image {
+        position: absolute;
+        right: 0;
+      }
+      .form--main--container {
+        padding: 40px;
+        z-index: 1;
+        max-width: 600px;
+
+        background-color: white;
+      }
+      .form--content--container {
+        textarea {
+          width: calc(100% - 20px);
+          padding: 10px;
+          resize: none;
+          outline: none;
+          min-height: 200px;
+        }
+        .tyc--checkbox {
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .accordion--container {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-bottom: 1px solid $primary;
+
+    .accordion--container--header {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 20px;
+      }
+    }
+    .accordion--container--content {
+      transition: all 0.2s;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.open {
+      .accordion--container--content {
+        max-height: 1000px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .function--container {
+    .function--container--content {
+      .banner--container {
+        img {
+          width: 250px;
+          height: 250px;
+          transform: scale(1.5);
+        }
+      }
+      .how--container {
+        .how--steps--container {
+          grid-template-columns: 1fr;
+          .how--step--container {
+            .how--step--layout {
+              strong {
+                font-size: 20px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .function--container {
+    .banner--container {
+      img {
+        width: 120px;
+        height: 120px;
+        transform: scale(1.5);
+      }
+      .banner--left--container {
+        padding: 20px;
       }
     }
   }
