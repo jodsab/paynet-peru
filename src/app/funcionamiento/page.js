@@ -12,6 +12,7 @@ import Form from "@/components/Form";
 import Input from "@/components/Input";
 import "./index.scss";
 import TextArea from "antd/es/input/TextArea";
+import WithBorder from "@/HOC/withBorder";
 
 const Accordion = ({ content, title }) => {
   const [open, setOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function Funcionamiento() {
   return (
     <main>
       <NavBar />
-      <div className="function--container">
+      <div className="function--container margin">
         <div className="function--container--content ">
           <div className="banner--container">
             <div className="banner--left--container">
@@ -55,127 +56,131 @@ export default function Funcionamiento() {
             </div>
             <Image width={320} height={320} src={Sofa} />
           </div>
-          <div className="how--container">
-            <strong className="subtitle">¿CÓMO FUNCIONA PAYNET?</strong>
-            <p>PayNet: Finanzas intuitivas a tu medida</p>
-            <div className="how--slide--container">
-              <div className="option active">Billetera digital</div>
-              <div className="option">Plataforma digital</div>
+          <WithBorder>
+            <div className="how--container">
+              <strong className="subtitle">¿CÓMO FUNCIONA PAYNET?</strong>
+              <p>PayNet: Finanzas intuitivas a tu medida</p>
+              <div className="how--slide--container">
+                <div className="option active">Billetera digital</div>
+                <div className="option">Plataforma digital</div>
+              </div>
+              <div className="how--steps--container">
+                <div className="how--step--container">
+                  <Image width={320} height={320} src={Step} />
+                  <div className="how--step--layout">
+                    <strong>1. Acceso a la aplicación</strong>
+                    <p>Abre la aplicación de tu banca móvil</p>
+                    <div className="how--step--buttons">
+                      <button
+                        className="button--container button--container--secondary"
+                        type="button"
+                      >
+                        Registrar
+                      </button>
+                      <button
+                        className="button--container button--container--primary"
+                        type="button"
+                      >
+                        Contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="how--step--container">
+                  <Image width={320} height={320} src={Step} />
+                  <div className="how--step--layout">
+                    <strong>2. Detalles del Pago</strong>
+                    <p>Elige la opcion pago de servicios.</p>
+                    <div className="how--step--buttons">
+                      <button
+                        className="button--container button--container--secondary"
+                        type="button"
+                      >
+                        Registrar
+                      </button>
+                      <button
+                        className="button--container button--container--primary"
+                        type="button"
+                      >
+                        Contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="how--step--container">
+                  <Image width={320} height={320} src={Step} />
+                  <div className="how--step--layout">
+                    <strong>3. Elegir destinatario</strong>
+                    <p>
+                      Selecciona LatinPay como el destinatario para tu pago.
+                    </p>
+                    <div className="how--step--buttons">
+                      <button
+                        className="button--container button--container--secondary"
+                        type="button"
+                      >
+                        Registrar
+                      </button>
+                      <button
+                        className="button--container button--container--primary"
+                        type="button"
+                      >
+                        Contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="how--step--container">
+                  <Image width={320} height={320} src={Step} />
+                  <div className="how--step--layout">
+                    <strong>4. Detalles del Pago</strong>
+                    <p>
+                      Ingresa la información requerida para el pago, como el
+                      monto y el código de comercio.
+                    </p>
+                    <div className="how--step--buttons">
+                      <button
+                        className="button--container button--container--secondary"
+                        type="button"
+                      >
+                        Registrar
+                      </button>
+                      <button
+                        className="button--container button--container--primary"
+                        type="button"
+                      >
+                        Contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="how--step--container">
+                  <Image width={320} height={320} src={Step} />
+                  <div className="how--step--layout">
+                    <strong>5. Verifíca el pago</strong>
+                    <p>
+                      Verifica y autoriza la transacción, y luego recibe la
+                      confirmación.
+                    </p>
+                    <div className="how--step--buttons">
+                      <button
+                        className="button--container button--container--secondary"
+                        type="button"
+                      >
+                        Registrar
+                      </button>
+                      <button
+                        className="button--container button--container--primary"
+                        type="button"
+                      >
+                        Contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="how--steps--container">
-              <div className="how--step--container">
-                <Image width={320} height={320} src={Step} />
-                <div className="how--step--layout">
-                  <strong>1. Acceso a la aplicación</strong>
-                  <p>Abre la aplicación de tu banca móvil</p>
-                  <div className="how--step--buttons">
-                    <button
-                      className="button--container button--container--secondary"
-                      type="button"
-                    >
-                      Registrar
-                    </button>
-                    <button
-                      className="button--container button--container--primary"
-                      type="button"
-                    >
-                      Contacto
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="how--step--container">
-                <Image width={320} height={320} src={Step} />
-                <div className="how--step--layout">
-                  <strong>2. Detalles del Pago</strong>
-                  <p>Elige la opcion pago de servicios.</p>
-                  <div className="how--step--buttons">
-                    <button
-                      className="button--container button--container--secondary"
-                      type="button"
-                    >
-                      Registrar
-                    </button>
-                    <button
-                      className="button--container button--container--primary"
-                      type="button"
-                    >
-                      Contacto
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="how--step--container">
-                <Image width={320} height={320} src={Step} />
-                <div className="how--step--layout">
-                  <strong>3. Elegir destinatario</strong>
-                  <p>Selecciona LatinPay como el destinatario para tu pago.</p>
-                  <div className="how--step--buttons">
-                    <button
-                      className="button--container button--container--secondary"
-                      type="button"
-                    >
-                      Registrar
-                    </button>
-                    <button
-                      className="button--container button--container--primary"
-                      type="button"
-                    >
-                      Contacto
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="how--step--container">
-                <Image width={320} height={320} src={Step} />
-                <div className="how--step--layout">
-                  <strong>4. Detalles del Pago</strong>
-                  <p>
-                    Ingresa la información requerida para el pago, como el monto
-                    y el código de comercio.
-                  </p>
-                  <div className="how--step--buttons">
-                    <button
-                      className="button--container button--container--secondary"
-                      type="button"
-                    >
-                      Registrar
-                    </button>
-                    <button
-                      className="button--container button--container--primary"
-                      type="button"
-                    >
-                      Contacto
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="how--step--container">
-                <Image width={320} height={320} src={Step} />
-                <div className="how--step--layout">
-                  <strong>5. Verifíca el pago</strong>
-                  <p>
-                    Verifica y autoriza la transacción, y luego recibe la
-                    confirmación.
-                  </p>
-                  <div className="how--step--buttons">
-                    <button
-                      className="button--container button--container--secondary"
-                      type="button"
-                    >
-                      Registrar
-                    </button>
-                    <button
-                      className="button--container button--container--primary"
-                      type="button"
-                    >
-                      Contacto
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </WithBorder>
           <strong className="subtitle margin"> PREGUNTAS FRECUENTES</strong>
           <div className="function--help margin">
             <Accordion
