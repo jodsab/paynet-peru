@@ -48,13 +48,17 @@ const Footer = () => {
         </li>
 
         <li>
-          <strong>Nosotros</strong>
+          <p>
+            <b>Nosotros</b>
+          </p>
           <p>Funcionamiento</p>
           <p>Comisiones</p>
           <p>Blog</p>
         </li>
         <li>
-          <strong>Contáctanos</strong>
+          <p>
+            <b>Contáctanos</b>
+          </p>
           <p>
             <BsFillTelephoneFill />
             <span>+511 739 0850</span>
@@ -69,7 +73,9 @@ const Footer = () => {
           </p>
         </li>
         <li>
-          <strong>Información Legal</strong>
+          <p>
+            <b>Información legal</b>
+          </p>
           <p>Términos y condiciones</p>
           <p>Políticas de privacidad</p>
           <p>Libro de Reclamaciones</p>

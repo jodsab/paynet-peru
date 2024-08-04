@@ -4,15 +4,18 @@
 .function--form--contact--us--container {
   padding: 10px;
   position: relative;
+
   .function--form--contact--us--content--container {
     .function--form--contact--us {
       display: flex;
       justify-content: center;
+
       .form--main--container {
         padding: 20px;
         z-index: 1;
         max-width: 600px;
         background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
         border-radius: 10px;
       }
       .form--content--container {

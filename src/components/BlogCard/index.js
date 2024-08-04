@@ -14,9 +14,8 @@ const BlogCard = () => {
       </div>
       <div className="blog--card--layout--container">
         <div className="blog--card--header--container">
-          <p>
-            <span>10/03/2024</span>
-          </p>
+          <span>10/03/2024</span>
+
           <span>Noticia destacada</span>
         </div>
         <div className="blog--card--body--container">

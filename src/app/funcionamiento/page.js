@@ -1,10 +1,7 @@
 "use client";
-import NavBar from "@/components/Navbar";
 import Sofa from "../assets/sofa.png";
 import Image from "next/image";
-import Step from "../assets/step.jpg";
 import React, { useState } from "react";
-import Footer from "@/components/Footer";
 import WithBorder from "@/HOC/withBorder";
 import FormContact from "./components/FormContact";
 import "./index.scss";
@@ -27,6 +24,7 @@ const Accordion = ({ content, title }) => {
 };
 
 export default function Funcionamiento() {
+  const [option, setOption] = useState(1);
   return (
     <main>
       <WithNavAndFooter>
@@ -61,12 +59,31 @@ export default function Funcionamiento() {
                       PayNet: Finanzas intuitivas a tu medida
                     </p>
                     <div className="how--slide--container">
-                      <div className="option active">Billetera digital</div>
-                      <div className="option">Plataforma digital</div>
+                      <div
+                        className={`${
+                          option === 1 ? "option active" : "option"
+                        } `}
+                        onClick={() => setOption(1)}
+                      >
+                        Billetera digital
+                      </div>
+                      <div
+                        className={`${
+                          option === 2 ? "option active" : "option"
+                        } `}
+                        onClick={() => setOption(2)}
+                      >
+                        Plataforma digital
+                      </div>
                     </div>
                     <div className="how--steps--container">
                       <div className="how--step--container">
-                        <Image width={320} height={320} src={Step} />
+                        <video key={`video${option}`} autoPlay loop muted>
+                          <source
+                            src={`./video${option}.mp4`}
+                            type="video/mp4"
+                          ></source>
+                        </video>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             1. ACCESO A LA APLICACIÓN
@@ -89,7 +106,12 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <Image width={320} height={320} src={Step} />
+                        <video key={`video${option}`} autoPlay loop muted>
+                          <source
+                            src={`./video${option}.mp4`}
+                            type="video/mp4"
+                          ></source>
+                        </video>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             2. DETALLES DEL PAGO
@@ -112,7 +134,12 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <Image width={320} height={320} src={Step} />
+                        <video key={`video${option}`} autoPlay loop muted>
+                          <source
+                            src={`./video${option}.mp4`}
+                            type="video/mp4"
+                          ></source>
+                        </video>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             3. ELEGIR DESTINATARIO
@@ -138,7 +165,12 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <Image width={320} height={320} src={Step} />
+                        <video key={`video${option}`} autoPlay loop muted>
+                          <source
+                            src={`./video${option}.mp4`}
+                            type="video/mp4"
+                          ></source>
+                        </video>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             4. DETALLES DE LA BOLETA
@@ -164,7 +196,12 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <Image width={320} height={320} src={Step} />
+                        <video key={`video${option}`} autoPlay loop muted>
+                          <source
+                            src={`./video${option}.mp4`}
+                            type="video/mp4"
+                          ></source>
+                        </video>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             5. VERIFÍCA EL PAGO
