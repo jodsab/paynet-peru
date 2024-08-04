@@ -1,5 +1,6 @@
 @import "../../resources/globalStyles/colors.scss";
 @import "../../resources/globalStyles/mediaQueries.scss";
+
 .one--blog--container {
   background-color: #f2f6f9;
   .one--blog--main--container {
@@ -9,6 +10,7 @@
     gap: 20px;
     .one--blog--hero--new {
       display: flex;
+      flex-direction: column;
       gap: 20px;
       width: 100%;
       .one--blog--new--content--container {
@@ -36,6 +38,8 @@
               padding: 0 20px;
               cursor: pointer;
               p {
+                margin: 0;
+                padding: 10px;
                 color: white;
               }
             }
@@ -59,10 +63,18 @@
             .one--blog--author--info {
               display: flex;
               flex-direction: column;
+              p {
+                margin: 0;
+              }
+              strong {
+                &:last-child {
+                  color: $secondary;
+                }
+              }
             }
           }
-          .one--blog--title--short {
-            font-size: 30px;
+          .one--blog--info--content {
+            line-height: 30px;
           }
         }
         .one--blog--new--image--caption {
@@ -77,17 +89,18 @@
       .one--blog--related--news {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding-left: 50px;
-        border-left: 2px solid $primary;
+        gap: 30px;
+
         b {
           text-decoration: underline;
           font-size: 22px;
           color: $primary;
+          text-align: center;
         }
         .one--blog--related--news--list {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 20px;
         }
       }
@@ -100,16 +113,16 @@
   }
 }
 
-@media (max-width: $tablet) {
+@media (min-width: $tablet) {
   .one--blog--container {
     .one--blog--main--container {
       .one--blog--hero--new {
-        flex-direction: column;
+        flex-direction: row;
         .one--blog--related--news {
-          padding-left: 0;
-          border-left: none;
+          padding-left: 50px;
+          border-left: 2px solid $primary;
           b {
-            text-align: center;
+            text-align: start;
           }
           .one--blog--related--news--list {
             flex-direction: row;

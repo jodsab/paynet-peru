@@ -50,7 +50,8 @@
               display: flex;
               flex-direction: column-reverse;
               gap: 40px;
-              img {
+
+              video {
                 width: 100%;
                 height: 200px;
               }
@@ -162,15 +163,15 @@
               .how--step--container {
                 align-items: center;
                 flex-direction: row;
-                img {
+                video {
                   width: 50%;
-                  height: 230px;
+                  height: 330px;
                 }
                 &:nth-child(odd) {
                   flex-direction: row-reverse;
                 }
                 .how--step--layout {
-                  P {
+                  p {
                     font-size: 20px;
                   }
                 }
@@ -213,7 +214,7 @@
             padding: 40px;
             .how--steps--container {
               .how--step--container {
-                img {
+                video {
                   width: 50%;
                   height: 340px;
                 }

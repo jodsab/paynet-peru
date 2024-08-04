@@ -5,109 +5,123 @@
   flex-direction: column;
   align-items: center;
   background-color: #f2f6f9;
-  padding: 50px 0;
   .blog--main--content--container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
     .blog--banner {
       display: flex;
       max-width: 1000px;
       border: 1px solid $primary;
       justify-content: center;
       border-radius: 20px;
-      padding: 0 50px;
+      padding: 30px;
       align-items: center;
 
       .blog--banner--left {
-        p {
-          font-size: 20px;
-        }
         .blog--banner--buttons {
           display: flex;
           gap: 10px;
         }
       }
-    }
-    .blog--news--lists {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      padding: 20px 0;
-      flex-wrap: wrap;
-    }
-    .blog--news--pagination {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      ul {
-        display: flex;
-        gap: 20px;
-        li {
-          padding: 5px;
-          display: flex;
-          width: 20px;
-          aspect-ratio: 1/1;
-          border-radius: 5px;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s;
-          cursor: pointer;
-          &:hover {
-            background-color: $primary;
-            color: white;
-          }
-          &.active {
-            background-color: $primary;
-            color: white;
-          }
-        }
+      img {
+        display: none;
       }
-      p {
-        transition: all 0.2s;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 10px;
-        &:hover {
-          background-color: $primary;
-          color: white;
+    }
+    .blog--purpose--container {
+      .blog--purpose--content--container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .blog--news--lists {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          padding: 20px 0;
+          flex-wrap: wrap;
+        }
+        .blog--news--pagination {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          ul {
+            display: flex;
+            gap: 20px;
+            li {
+              padding: 5px;
+              display: flex;
+              width: 20px;
+              aspect-ratio: 1/1;
+              border-radius: 5px;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.2s;
+              cursor: pointer;
+              &:hover {
+                background-color: $primary;
+                color: white;
+              }
+              &.active {
+                background-color: $primary;
+                color: white;
+              }
+            }
+          }
+          p {
+            transition: all 0.2s;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            &:hover {
+              background-color: $primary;
+              color: white;
+            }
+          }
         }
       }
     }
   }
 }
-@media (max-width: $tablet) {
+
+@media (min-width: $mobile) {
   .blog--main--container {
     .blog--main--content--container {
       .blog--banner {
-        padding: 20px;
         img {
           width: 200px;
           height: 200px;
+          display: block;
+        }
+      }
+      .blog--purpose--container {
+        .blog--purpose--content--container {
+          .blog--news--pagination {
+            flex-direction: row;
+          }
         }
       }
     }
   }
 }
-@media (max-width: $mobile) {
+@media (min-width: $tablet) {
   .blog--main--container {
     .blog--main--content--container {
       .blog--banner {
-        padding: 20px;
-        .blog--banner--left {
-          p {
-            font-size: 16px;
-          }
-        }
+        padding: 40px;
         img {
-          width: 100px;
-          height: 100px;
+          width: 400px;
+          height: 400px;
+          display: block;
         }
       }
-      .blog--news--pagination {
-        flex-direction: column;
-        gap: 0;
+      .blog--purpose--container {
+        .blog--purpose--content--container {
+          .blog--news--pagination {
+            flex-direction: row;
+          }
+        }
       }
     }
   }

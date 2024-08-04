@@ -4,7 +4,8 @@
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  width: 320px;
+  width: 290px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   .blog--card--image--container {
     display: flex;
     justify-content: center;
@@ -39,6 +40,9 @@
     }
   }
   .blog--card--layout--container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 10px 20px;
     .blog--card--header--container {
       display: flex;
