@@ -19,7 +19,7 @@ export default function Home() {
     <main>
       <WithNavAndFooter>
         <div className="home_container">
-          <div className="home_content margin">
+          <div className="home_content content">
             <h1>TRANSACCIONES DIRECTAS EN LA PALMA DE TU MANO</h1>
             <WithBorder>
               <div className="top_border">

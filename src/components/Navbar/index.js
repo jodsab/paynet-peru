@@ -22,7 +22,7 @@ const NavBar = () => {
     return (
       <div className="navbar_wrapper">
         <div className="navbar_container">
-          <div className="navbar_header margin">
+          <div className="navbar_header content">
             <div className="logo">
               <Logo />
             </div>
@@ -36,7 +36,7 @@ const NavBar = () => {
             </button>
           </div>
           {openMenu && <div className="backdrop" onClick={closeMenu}></div>}
-          <div className={`toggle_menu margin ${openMenu ? "open" : "close"}`}>
+          <div className={`toggle_menu content ${openMenu ? "open" : "close"}`}>
             <button>
               <p>Nosotros</p>
             </button>
@@ -65,7 +65,7 @@ const NavBar = () => {
 
   const DesktopComponent = () => {
     return (
-      <div className="desktop_menu_container margin">
+      <div className="desktop_menu_container content">
         <div className="navbar_header">
           <h4 className="logo">PAYNET</h4>
         </div>
