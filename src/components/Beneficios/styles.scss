@@ -1,0 +1,27 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .sub {
+    font-size: 30px;
+  }
+}
+.areas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  .area {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    .suba {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      h6 {
+        font-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "../../resources/globalStyles/colors.scss";
+
+.tabla_de_comisiones_container {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    .card {
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+      padding: 20px 23px;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &.blue {
+        background: linear-gradient(90deg, #4dd4ff, #415dff);
+
+        h2 {
+          color: white;
+        }
+
+        .minorista {
+          background-color: #5ace24;
+        }
+        p {
+          color: white;
+
+          .circles {
+            background-color: white;
+          }
+        }
+
+        .line {
+          background-color: white;
+        }
+
+        .text {
+          color: white !important;
+        }
+
+        .btn_registrarse {
+          background-color: transparent;
+          border: 1px solid white;
+        }
+
+        .interes {
+          border: 1px solid white;
+        }
+      }
+
+      .minorista {
+        background-color: #52adeb;
+        padding: 5px 8px;
+        border-radius: 20px;
+        color: white;
+        width: 120px;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .line {
+        background-color: $primary;
+        height: 1px;
+      }
+
+      .micros {
+        font-style: italic;
+      }
+
+      ul {
+        li {
+          p {
+            display: flex;
+            gap: 10px;
+            .circles {
+              height: 7px;
+              width: 7px;
+              background-color: $primary;
+              border-radius: 50%;
+              margin-top: 7px;
+            }
+          }
+        }
+      }
+
+      .interes {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
+        .porcentaje {
+          font-size: 45px;
+          font-weight: bold;
+        }
+
+        .text {
+          color: black;
+          width: 35%;
+        }
+      }
+
+      .btn_registrarse {
+        margin-top: 10px;
+        background-color: $secondary;
+        padding: 10px;
+        border-radius: 12px;
+        p {
+          color: white;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

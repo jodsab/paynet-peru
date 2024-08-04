@@ -5,56 +5,53 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+
+    .top_border {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+
+      .subtitle {
+        font-size: 30px;
+        margin: 0 0 20px 0;
+      }
+
+      .fixed {
+        position: relative;
+        img {
+          position: absolute;
+          top: -80px;
+          right: -35px;
+        }
+      }
+    }
   }
   h1 {
     font-size: 30px;
   }
-  .subtitle {
-    font-size: 30px;
-  }
+
   .buttons {
     display: flex;
-    gap: 45px;
+    gap: 15px;
     button {
       padding: 6px 12px;
       border-radius: 8px;
+      width: 120px;
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
     }
     .primary_login {
       background-color: $secondary;
-      color: white;
       cursor: pointer;
+      p {
+        color: white;
+      }
     }
     .secondary_contact {
       background-color: transparent;
       border: 1px solid $primary;
-    }
-  }
-
-  .benefits {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .sub {
-      font-size: 30px;
-    }
-  }
-  .areas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    .area {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      border-radius: 20px;
-      .suba {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        h6 {
-          font-size: 24px;
-        }
-      }
+      color: $primary;
     }
   }
 }
