@@ -1,0 +1,12 @@
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+
+.form--main--container {
+  strong {
+    font-size: 30px;
+  }
+  .form--content--container {
+    display: flex;
+    flex-direction: column;
+  }
+}

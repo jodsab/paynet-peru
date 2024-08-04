@@ -1,0 +1,20 @@
+.input--main--container {
+  display: flex;
+  flex-direction: column;
+  .input--content--container {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+    input {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      flex: 1;
+    }
+  }
+}

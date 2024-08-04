@@ -1,5 +1,5 @@
 @import "../resources/globalStyles/colors.scss";
-
+@import "../resources/globalStyles/mediaQueries.scss";
 body {
   overflow-x: hidden;
   box-sizing: border-box;
@@ -49,6 +49,7 @@ h2,
 h3,
 h4,
 h5,
+strong,
 h6 {
   font-family: "Larsseit", sans-serif;
   margin: 0;
@@ -62,4 +63,49 @@ p {
 
 ul {
   padding-left: 0;
+}
+
+.button--container {
+  padding: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  text-wrap: nowrap;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  &--primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: white;
+  }
+  &--secondary {
+    background-color: $secondary;
+    color: white;
+    border-color: $secondary;
+  }
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+.subtitle {
+  font-size: 60px;
+  color: $primary;
+}
+
+@media (max-width: $tablet) {
+  .button--container {
+    font-size: 15px;
+  }
+  .subtitle {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .button--container {
+    font-size: 14px;
+  }
+  .subtitle {
+    font-size: 25px;
+  }
 }
