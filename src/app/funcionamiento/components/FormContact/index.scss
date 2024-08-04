@@ -1,0 +1,52 @@
+@import "../../../../resources/globalStyles/colors.scss";
+@import "../../../../resources/globalStyles/mediaQueries.scss";
+
+.function--form--contact--us--container {
+  padding: 10px;
+  position: relative;
+  .function--form--contact--us--content--container {
+    .function--form--contact--us {
+      display: flex;
+      justify-content: center;
+      .form--main--container {
+        padding: 20px;
+        z-index: 1;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .form--content--container {
+        textarea {
+          width: calc(100% - 20px);
+          padding: 10px;
+          resize: none;
+          outline: none;
+          min-height: 200px;
+        }
+        .tyc--checkbox {
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .form--hero--image {
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+}
+
+@media (min-width: $mobile) {
+  .function--form--contact--us--container {
+    padding: 20px;
+    .function--form--contact--us--content--container {
+      .function--form--contact--us {
+        justify-content: flex-start;
+        .form--main--container {
+          padding: 50px;
+        }
+      }
+    }
+  }
+}

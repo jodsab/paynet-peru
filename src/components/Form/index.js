@@ -3,7 +3,7 @@ import "./styles.scss";
 const Form = ({ title, children }) => {
   return (
     <div className="form--main--container">
-      <strong>{title}</strong>
+      <strong className="subtitle">{title}</strong>
       <div className="form--content--container">{children}</div>
     </div>
   );
