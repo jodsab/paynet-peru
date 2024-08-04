@@ -1,29 +1,33 @@
 @import "../../resources/globalStyles/colors.scss";
 @import "../../resources/globalStyles/mediaQueries.scss";
+
 .function--container {
+  padding: 50px 0;
   background-color: #f2f6f9;
   .function--container--content {
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
     gap: 50px;
     .banner--container {
       background-color: rgba(#52adeb, 0.2);
       display: flex;
-      width: 100%;
-      align-self: center;
-      align-items: center;
-      position: relative;
       justify-content: center;
+      width: 100%;
+      border-radius: 15px;
+      height: 250px;
+      align-items: center;
       img {
-        transform: scale(1.2);
+        display: none;
       }
       .banner--left--container {
         display: flex;
+        padding: 10px;
         flex-direction: column;
+        align-items: center;
         gap: 20px;
-        padding: 50px;
-        justify-content: space-between;
+        strong {
+          text-align: center;
+        }
         .banner--buttons--container {
           display: flex;
           gap: 10px;
@@ -31,152 +35,161 @@
       }
     }
     .how--container {
-      padding: 50px;
-      background-color: white;
-      border-radius: 10px;
-      .how--slide--container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        width: max-content;
-        .option {
-          padding: 10px;
-          background-color: rgba(#52adeb, 0.2);
-          display: flex;
-          justify-content: center;
-          color: $primary;
-          cursor: pointer;
-          &:first-of-type {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-          }
-          &:last-of-type {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-          }
-          &.active {
-            background-color: $secondary;
-            color: white;
-          }
-        }
-      }
-      .how--steps--container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        .how--step--container {
-          display: flex;
-          flex-direction: column-reverse;
-          padding-top: 30px;
-
-          gap: 40px;
-          img {
-            width: 100%;
-            object-fit: contain;
-          }
-          .how--step--layout {
-            flex: 1;
-            strong {
-              font-size: 40px;
-              text-transform: uppercase;
-            }
-            p {
-              font-size: 25px;
-            }
-            .how--step--buttons {
-              display: flex;
-              gap: 10px;
-            }
-          }
-        }
-      }
-    }
-    .function--help {
-      background-color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-    .function--form--contact--us {
-      display: flex;
-
-      justify-content: center;
-      position: relative;
-      .form--hero--image {
-        position: absolute;
-        right: 0;
-      }
-      .form--main--container {
-        padding: 40px;
-        z-index: 1;
-        max-width: 600px;
-
+      .how--container-content {
         background-color: white;
-      }
-      .form--content--container {
-        textarea {
-          width: calc(100% - 20px);
-          padding: 10px;
-          resize: none;
-          outline: none;
-          min-height: 200px;
-        }
-        .tyc--checkbox {
+        border-radius: 15px;
+        .how--container--info {
           display: flex;
-          gap: 5px;
+          flex-direction: column;
+          gap: 20px;
+          .how--steps--container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .how--step--container {
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 40px;
+              img {
+                width: 100%;
+                height: 200px;
+              }
+              .how--step--layout {
+                flex: 1;
+                .how--step--buttons {
+                  display: flex;
+                  gap: 10px;
+                }
+              }
+            }
+          }
+          .how--slide--container {
+            display: flex;
+            flex-direction: column;
+            .option {
+              padding: 10px;
+              background-color: rgba(#52adeb, 0.2);
+              display: flex;
+              justify-content: center;
+              color: $primary;
+              cursor: pointer;
+              &.active {
+                background-color: $secondary;
+                color: white;
+              }
+            }
+          }
         }
       }
     }
-  }
-  .accordion--container {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    border-bottom: 1px solid $primary;
-
-    .accordion--container--header {
-      display: flex;
-      justify-content: space-between;
-
-      p {
-        font-size: 20px;
-      }
-    }
-    .accordion--container--content {
-      transition: all 0.2s;
-      max-height: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
-    &.open {
-      .accordion--container--content {
-        max-height: 1000px;
-        opacity: 1;
-        visibility: visible;
+    .function--help--container {
+      .function--help--content--container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        border-radius: 10px;
+        .function--help--accordion {
+          background-color: white;
+          border-radius: 10px;
+          padding: 10px;
+          .accordion--container {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            border-bottom: 1px solid $primary;
+            .accordion--container--header {
+              display: flex;
+              justify-content: space-between;
+            }
+            .accordion--container--content {
+              transition: all 0.2s;
+              max-height: 0;
+              opacity: 0;
+              visibility: hidden;
+            }
+            &.open {
+              .accordion--container--content {
+                max-height: 1000px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-@media (max-width: $tablet) {
+@media (min-width: $mobile) {
   .function--container {
     .function--container--content {
       .banner--container {
+        padding: 20px;
         img {
-          width: 250px;
-          height: 250px;
-          transform: scale(1.5);
+          display: block;
+          transform: scale(1.2);
+        }
+        .banner--left--container {
+          align-items: baseline;
+          padding: 40px;
+
+          strong {
+            text-align: start;
+          }
         }
       }
       .how--container {
-        .how--steps--container {
-          grid-template-columns: 1fr;
-          .how--step--container {
-            .how--step--layout {
-              strong {
-                font-size: 20px;
+        .how--container-content {
+          .how--container--info {
+            padding: 20px;
+
+            .how--slide--container {
+              flex-direction: row;
+              font-size: 20px;
+              .option {
+                &:first-of-type {
+                  border-top-left-radius: 5px;
+                  border-bottom-left-radius: 5px;
+                }
+                &:last-of-type {
+                  border-top-right-radius: 5px;
+                  border-bottom-right-radius: 5px;
+                }
               }
-              p {
-                font-size: 16px;
+            }
+            .how--steps--container {
+              .how--step--container {
+                align-items: center;
+                flex-direction: row;
+                img {
+                  width: 50%;
+                  height: 230px;
+                }
+                &:nth-child(odd) {
+                  flex-direction: row-reverse;
+                }
+                .how--step--layout {
+                  P {
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .function--help--container {
+        .function--help--content--container {
+          padding: 20px;
+          .function--help--accordion {
+            padding: 30px;
+            .accordion--container {
+              .accordion--container--header {
+                p {
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -186,16 +199,54 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (min-width: $tablet) {
   .function--container {
-    .banner--container {
-      img {
-        width: 120px;
-        height: 120px;
-        transform: scale(1.5);
+    .function--container--content {
+      .banner--container {
+        height: 380px;
+        img {
+          transform: scale(1.6);
+        }
       }
-      .banner--left--container {
-        padding: 20px;
+      .how--container {
+        .how--container-content {
+          .how--container--info {
+            padding: 40px;
+            .how--steps--container {
+              .how--step--container {
+                img {
+                  width: 50%;
+                  height: 340px;
+                }
+                .how--step--layout {
+                  P {
+                    font-size: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .function--help--container {
+        .function--help--content--container {
+          .function--help--accordion {
+            .accordion--container {
+              .accordion--container--header {
+                p {
+                  font-size: 30px;
+                }
+              }
+              .accordion--container--content {
+                ul {
+                  li {
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
