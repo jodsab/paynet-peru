@@ -1,0 +1,11 @@
+@import "../../resources/globalStyles/mediaQueries.scss";
+
+.body {
+  padding-top: 100px;
+}
+
+@media screen and (min-width: $desktop) {
+  .body {
+    padding-top: 150px;
+  }
+}

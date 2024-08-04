@@ -44,6 +44,10 @@ button {
   font-family: "Urbanist", sans-serif;
 }
 
+body {
+  background-color: #f2f6f9;
+}
+
 h1,
 h2,
 h3,
@@ -90,6 +94,16 @@ ul {
 .subtitle {
   font-size: 60px;
   color: $primary;
+}
+
+@media screen and (min-width: $tablet) {
+  h1 {
+    font-size: 120px;
+  }
+
+  p {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: $tablet) {
