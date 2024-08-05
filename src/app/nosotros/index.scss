@@ -1,5 +1,63 @@
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+
 .nosotros_container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+
+  .nosotros_border {
+    .img_calendar {
+      display: none;
+    }
+  }
+
+  .cards {
+    margin-top: 20px;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      .backblue {
+        background-color: $primary;
+        color: white;
+        border-radius: 20px;
+        padding: 8px 12px;
+        margin: 0;
+      }
+    }
+  }
+
+  .light {
+    background-color: #d8f1ff;
+    border-radius: 20px;
+    padding: 30px;
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .nosotros_container {
+    h1 {
+      width: 60%;
+    }
+    .nosotros_border {
+      position: relative;
+      .img_calendar {
+        display: block;
+        position: absolute;
+        top: -270px;
+        right: -20px;
+        width: 600px;
+        height: 480px;
+        object-fit: cover;
+      }
+
+      .subtitle {
+        width: 400px;
+      }
+    }
+  }
 }
