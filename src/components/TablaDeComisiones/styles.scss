@@ -130,7 +130,8 @@
 
     .cards {
       margin-top: 40px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       .card {
         padding: 30px;
       }

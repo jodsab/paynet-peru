@@ -60,7 +60,7 @@ export default function Funcionamiento() {
                 <strong className="title"> PREGUNTAS FRECUENTES</strong>
                 <div className="function--help--accordion">
                   <Accordion
-                    title="¿Cómo me afilio a LatinPay?"
+                    title="¿Cómo me afilio a PayNet?"
                     content={
                       <ul>
                         <li>
@@ -75,7 +75,7 @@ export default function Funcionamiento() {
                     }
                   />
                   <Accordion
-                    title="¿Qué beneficios tendré al afiliarme a LatinPay?"
+                    title="¿Qué beneficios tendré al afiliarme a PayNet?"
                     content={
                       <ul>
                         <li>
@@ -86,7 +86,7 @@ export default function Funcionamiento() {
                     }
                   />
                   <Accordion
-                    title="¿Es seguro usar LatinPay?"
+                    title="¿Es seguro usar PayNet?"
                     content={
                       <ul>
                         <li>
@@ -97,7 +97,7 @@ export default function Funcionamiento() {
                     }
                   />
                   <Accordion
-                    title="¿Quienes respaldan a LatinPay?"
+                    title="¿Quienes respaldan a PayNet?"
                     content={
                       <ul>
                         <li>
@@ -108,7 +108,7 @@ export default function Funcionamiento() {
                     }
                   />
                   <Accordion
-                    title="¿Existe algun costo por afiliarme a LatinPay?"
+                    title="¿Existe algun costo por afiliarme a PayNet?"
                     content={
                       <ul>
                         <li>

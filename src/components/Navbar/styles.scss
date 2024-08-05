@@ -66,11 +66,19 @@ $navbar_desktop_height: 80px;
           max-height: 0;
         }
 
-        button {
+        a {
+          text-align: center;
           p {
             font-size: 18px;
             padding-bottom: 8px;
             border-bottom: 1px solid $primary;
+          }
+        }
+
+        a.active {
+          background-color: $primary;
+          p {
+            color: white;
           }
         }
 
@@ -81,7 +89,7 @@ $navbar_desktop_height: 80px;
           margin-top: 10px;
           margin-bottom: 20px;
 
-          button {
+          a {
             padding: 8px;
             border-radius: 15px;
             width: 130px;
@@ -141,13 +149,17 @@ $navbar_desktop_height: 80px;
         border-radius: 20px;
         z-index: 9999999;
 
+        .navbar_header {
+          margin-left: 20px;
+        }
+
         .toggle_menu {
           display: flex;
           align-items: center;
           gap: 20px;
           margin-right: 20px;
 
-          button {
+          a {
             cursor: pointer;
             padding: 8px 10px;
             border-radius: 15px;
@@ -156,7 +168,14 @@ $navbar_desktop_height: 80px;
             }
           }
 
-          button:hover {
+          a:hover {
+            background-color: $primary;
+            p {
+              color: white;
+            }
+          }
+
+          a.active {
             background-color: $primary;
             p {
               color: white;

@@ -77,7 +77,7 @@ const ComoFunciona = () => {
             </video>
             <div className="how--step--layout">
               <strong className="subtitle">3. ELEGIR DESTINATARIO</strong>
-              <p>Selecciona LatinPay como el destinatario para tu pago.</p>
+              <p>Selecciona PayNet como el destinatario para tu pago.</p>
               <div className="how--step--buttons">
                 <button
                   className="button--container button--container--secondary"

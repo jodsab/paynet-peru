@@ -1,8 +1,11 @@
 @import "../../resources/globalStyles/colors.scss";
 
 .logo_container {
-  display: flex;
-  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+  }
+
   h3 {
     font-size: 30px;
   }

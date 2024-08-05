@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import Logo from "../Logo";
@@ -9,6 +11,9 @@ import "./styles.scss";
 
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [activeUrl, setActiveUrl] = useState("");
+
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -17,6 +22,12 @@ const NavBar = () => {
   const closeMenu = () => {
     setOpenMenu(false);
   };
+
+  console.log(pathname);
+
+  useEffect(() => {
+    setActiveUrl(pathname);
+  }, [pathname]);
 
   const MobileComponent = () => {
     return (
@@ -37,25 +48,37 @@ const NavBar = () => {
           </div>
           {openMenu && <div className="backdrop" onClick={closeMenu}></div>}
           <div className={`toggle_menu content ${openMenu ? "open" : "close"}`}>
-            <button>
+            <Link
+              className={activeUrl == "/nosotros" ? "active" : "disabled"}
+              href="/nosotros"
+            >
               <p>Nosotros</p>
-            </button>
-            <button>
+            </Link>
+            <Link
+              className={activeUrl == "/funcionamiento" ? "active" : "disabled"}
+              href="/funcionamiento"
+            >
               <p>Funcionamiento</p>
-            </button>
-            <button>
+            </Link>
+            <Link
+              className={activeUrl == "/comisiones" ? "active" : "disabled"}
+              href="/comisiones"
+            >
               <p>Comisiones</p>
-            </button>
-            <button>
+            </Link>
+            <Link
+              className={activeUrl == "/blog" ? "active" : "disabled"}
+              href="/blog"
+            >
               <p>Blog</p>
-            </button>
+            </Link>
             <div className="extra_menu">
-              <button className="iniciar_sesion">
+              <Link href="/iniciar-sesion" className="iniciar_sesion">
                 <p>Iniciar sesión</p>
-              </button>
-              <button className="registrarse">
+              </Link>
+              <Link href="/registrarse" className="registrarse">
                 <p>Registrar</p>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,28 +90,40 @@ const NavBar = () => {
     return (
       <div className="desktop_menu_container content">
         <div className="navbar_header">
-          <h4 className="logo">PAYNET</h4>
+          <Logo />
         </div>
         <div className={`toggle_menu ${openMenu ? "open" : "close"}`}>
-          <button>
+          <Link
+            className={activeUrl == "/nosotros" ? "active" : "disabled"}
+            href="/nosotros"
+          >
             <p>Nosotros</p>
-          </button>
-          <button>
+          </Link>
+          <Link
+            className={activeUrl == "/funcionamiento" ? "active" : "disabled"}
+            href="/funcionamiento"
+          >
             <p>Funcionamiento</p>
-          </button>
-          <button>
+          </Link>
+          <Link
+            className={activeUrl == "/comisiones" ? "active" : "disabled"}
+            href="/comisiones"
+          >
             <p>Comisiones</p>
-          </button>
-          <button>
+          </Link>
+          <Link
+            className={activeUrl == "/blog" ? "active" : "disabled"}
+            href="/blog"
+          >
             <p>Blog</p>
-          </button>
+          </Link>
           <div className="extra_menu">
-            <button className="iniciar_sesion">
+            <Link href="/iniciar-sesion" className="iniciar_sesion">
               <p>Iniciar sesión</p>
-            </button>
-            <button className="registrarse">
+            </Link>
+            <Link href="/registrarse" className="registrarse">
               <p>Registrar</p>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

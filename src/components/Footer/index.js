@@ -69,7 +69,7 @@ const Footer = () => {
           </p>
           <p>
             <MdEmail />
-            <span>operaciones@latinpay.pe</span>
+            <span>operaciones@PayNet.pe</span>
           </p>
         </li>
         <li>
