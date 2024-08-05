@@ -1,11 +1,12 @@
-import NavBar from "@/components/Navbar";
+import WithNavAndFooter from "@/HOC/withNavAndFooter";
 import "./index.scss";
 
 export default function IniciarSesion() {
   return (
     <main>
-      <NavBar />
-      IniciarSesion
+      <WithNavAndFooter>
+        <p> IniciarSesion</p>
+      </WithNavAndFooter>
     </main>
   );
 }
