@@ -1,8 +1,11 @@
 import React from "react";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
-import "./styles.scss";
+import Link from "next/link";
 import Noticia from "../../../src/app/assets/step.jpg";
 import Image from "next/image";
+
+import "./styles.scss";
+
 const BlogCard = () => {
   return (
     <div className="blog--card--main--container">
@@ -26,12 +29,13 @@ const BlogCard = () => {
           </p>
         </div>
         <div className="blog--card--footer--container">
-          <button
+          <Link
+            href="/blog/un-nuevo-blog"
             type="button"
             className="button--container button--container--secondary"
           >
             Ver más
-          </button>
+          </Link>
         </div>
       </div>
     </div>

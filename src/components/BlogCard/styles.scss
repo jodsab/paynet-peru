@@ -1,4 +1,5 @@
-@use "../../resources/globalStyles/colors.scss" as *;
+@import "../../resources/globalStyles/colors.scss";
+
 .blog--card--main--container {
   display: flex;
   flex-direction: column;

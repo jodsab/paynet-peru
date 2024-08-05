@@ -59,7 +59,7 @@ const TablaDeComisiones = () => {
               <p>REGISTRARSE</p>
             </button>
           </div>
-          <div className="card blue">
+          <div className="bluecard card">
             <h2>CAMPEONES COMERCIALS</h2>
             <span className="minorista">MAYORISTA</span>
             <div className="line"></div>

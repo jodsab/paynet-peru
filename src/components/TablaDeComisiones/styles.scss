@@ -3,9 +3,10 @@
 
 .tabla_de_comisiones_container {
   .cards {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+
     .card {
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
       padding: 20px 23px;
@@ -14,8 +15,9 @@
       flex-direction: column;
       gap: 15px;
 
-      &.blue {
+      &.bluecard {
         background: linear-gradient(90deg, #4dd4ff, #415dff);
+        color: white;
 
         h2 {
           color: white;
@@ -24,6 +26,7 @@
         .minorista {
           background-color: #5ace24;
         }
+
         p {
           color: white;
 
@@ -77,6 +80,7 @@
           p {
             display: flex;
             gap: 10px;
+
             .circles {
               height: 7px;
               width: 7px;
@@ -96,6 +100,7 @@
         align-items: center;
         gap: 10px;
         padding: 12px 0;
+
         .porcentaje {
           font-size: 45px;
           font-weight: bold;
@@ -112,6 +117,7 @@
         background-color: $secondary;
         padding: 10px;
         border-radius: 12px;
+
         p {
           color: white;
           font-size: 17px;
@@ -130,9 +136,12 @@
 
     .cards {
       margin-top: 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
       .card {
+        flex: 1;
         padding: 30px;
       }
     }

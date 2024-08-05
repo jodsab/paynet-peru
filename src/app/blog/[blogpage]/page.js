@@ -1,12 +1,13 @@
 import { FaCalendarAlt } from "react-icons/fa";
-import NewImage from "../assets/venezuela.png";
-import Avatar from "../assets/avatar.jpg";
+import NewImage from "./assets/venezuela.png";
+import Avatar from "./assets/avatar.jpg";
 import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
 import WithNavAndFooter from "@/HOC/withNavAndFooter";
 import "./index.scss";
 
-export default function OneBlog() {
+export default function OneBlog({ params }) {
+  console.log(params.blogpage);
   return (
     <main>
       <WithNavAndFooter>
@@ -25,7 +26,7 @@ export default function OneBlog() {
             <div className="one--blog--hero--new">
               <div className="one--blog--new--content--container">
                 <div className="one--blog--new--image--container">
-                  <Image width={500} src={NewImage} />
+                  <Image width={500} src={NewImage} alt="venezuela" />
 
                   <div className="one--blog--new--image--caption">
                     <p>
@@ -39,7 +40,7 @@ export default function OneBlog() {
                 <div className="one--blog--info--container">
                   <div className="one--blog--author--info">
                     <div className="one--blog--author--avatar">
-                      <Image width={80} src={Avatar} />
+                      <Image width={80} src={Avatar} alt="avatar" />
                     </div>
                     <div className="one--blog--author--info">
                       <strong>Zagala Hernandez, Carlos</strong>
