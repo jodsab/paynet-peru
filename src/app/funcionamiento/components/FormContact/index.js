@@ -57,6 +57,7 @@ const FormContact = () => {
         </div>
       </div>
       <Image
+        alt="phone"
         className="form--hero--image"
         width={700}
         height={700}

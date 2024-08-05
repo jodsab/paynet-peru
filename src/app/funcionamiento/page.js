@@ -1,11 +1,13 @@
 "use client";
 import Sofa from "../assets/sofa.png";
 import Image from "next/image";
-import React, { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import React, { useRef, useState } from "react";
 import WithBorder from "@/HOC/withBorder";
 import FormContact from "./components/FormContact";
 import "./index.scss";
 import WithNavAndFooter from "@/HOC/withNavAndFooter";
+import useScrollToRef from "@/hooks/useScrollTo";
 
 const Accordion = ({ content, title }) => {
   const [open, setOpen] = useState(false);
@@ -25,6 +27,8 @@ const Accordion = ({ content, title }) => {
 
 export default function Funcionamiento() {
   const [option, setOption] = useState(1);
+  const faqRef = useRef(null);
+  const scrollToFaq = useScrollToRef(faqRef);
   return (
     <main>
       <WithNavAndFooter>
@@ -48,7 +52,7 @@ export default function Funcionamiento() {
                   </button>
                 </div>
               </div>
-              <Image width={320} height={320} src={Sofa} />
+              <Image alt="MenSofa" width={320} height={320} src={Sofa} />
             </div>
             <div className="how--container">
               <div className="how--container-content content">
@@ -78,12 +82,25 @@ export default function Funcionamiento() {
                     </div>
                     <div className="how--steps--container">
                       <div className="how--step--container">
-                        <video key={`video${option}`} autoPlay loop muted>
-                          <source
-                            src={`./video${option}.mp4`}
-                            type="video/mp4"
-                          ></source>
-                        </video>
+                        <div className="how--step--video--container">
+                          {option === 1 ? (
+                            <video
+                              src="./video1.mp4"
+                              key="video1"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          ) : (
+                            <video
+                              key="video2"
+                              src="./video2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          )}
+                        </div>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             1. ACCESO A LA APLICACIÓN
@@ -106,12 +123,25 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <video key={`video${option}`} autoPlay loop muted>
-                          <source
-                            src={`./video${option}.mp4`}
-                            type="video/mp4"
-                          ></source>
-                        </video>
+                        <div className="how--step--video--container">
+                          {option === 1 ? (
+                            <video
+                              src="./video1.mp4"
+                              key="video1"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          ) : (
+                            <video
+                              key="video2"
+                              src="./video2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          )}
+                        </div>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             2. DETALLES DEL PAGO
@@ -134,12 +164,25 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <video key={`video${option}`} autoPlay loop muted>
-                          <source
-                            src={`./video${option}.mp4`}
-                            type="video/mp4"
-                          ></source>
-                        </video>
+                        <div className="how--step--video--container">
+                          {option === 1 ? (
+                            <video
+                              src="./video1.mp4"
+                              key="video1"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          ) : (
+                            <video
+                              key="video2"
+                              src="./video2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          )}
+                        </div>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             3. ELEGIR DESTINATARIO
@@ -165,12 +208,25 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <video key={`video${option}`} autoPlay loop muted>
-                          <source
-                            src={`./video${option}.mp4`}
-                            type="video/mp4"
-                          ></source>
-                        </video>
+                        <div className="how--step--video--container">
+                          {option === 1 ? (
+                            <video
+                              src="./video1.mp4"
+                              key="video1"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          ) : (
+                            <video
+                              key="video2"
+                              src="./video2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          )}
+                        </div>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             4. DETALLES DE LA BOLETA
@@ -196,12 +252,25 @@ export default function Funcionamiento() {
                         </div>
                       </div>
                       <div className="how--step--container">
-                        <video key={`video${option}`} autoPlay loop muted>
-                          <source
-                            src={`./video${option}.mp4`}
-                            type="video/mp4"
-                          ></source>
-                        </video>
+                        <div className="how--step--video--container">
+                          {option === 1 ? (
+                            <video
+                              src="./video1.mp4"
+                              key="video1"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          ) : (
+                            <video
+                              key="video2"
+                              src="./video2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                            ></video>
+                          )}
+                        </div>
                         <div className="how--step--layout">
                           <strong className="subtitle">
                             5. VERIFÍCA EL PAGO
@@ -226,12 +295,19 @@ export default function Funcionamiento() {
                           </div>
                         </div>
                       </div>
+                      <div
+                        className="how--step--scroll--button"
+                        onClick={scrollToFaq}
+                      >
+                        <MdKeyboardArrowDown />
+                        <p>¿Tienes dudas?</p>
+                      </div>
                     </div>
                   </div>
                 </WithBorder>
               </div>
             </div>
-            <div className="function--help--container ">
+            <div ref={faqRef} className="function--help--container ">
               <div className="function--help--content--container content">
                 <strong className="title"> PREGUNTAS FRECUENTES</strong>
                 <div className="function--help--accordion">
