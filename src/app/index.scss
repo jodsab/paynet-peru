@@ -19,8 +19,11 @@
         position: relative;
         img {
           position: absolute;
-          top: -80px;
+          top: -90px;
           right: -35px;
+          height: 140px;
+          width: 140px;
+          object-fit: cover;
         }
       }
     }
@@ -28,7 +31,7 @@
 
   .buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     button {
       padding: 6px 12px;
@@ -45,13 +48,55 @@
         color: white;
       }
     }
+
+    .primary_login:hover {
+      opacity: 0.8;
+    }
     .secondary_contact {
       background-color: transparent;
       border: 1px solid $primary;
       color: $primary;
     }
+
+    .secondary_contact:hover {
+      background-color: $primary;
+      p {
+        color: white;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $tablet) {
+  .home_container {
+    .home_content {
+      .top_border {
+        .subtitle {
+          width: 400px;
+        }
+
+        .fixed {
+          img {
+            top: -220px;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      button {
+        p {
+        }
+      }
+      .primary_login {
+        p {
+        }
+      }
+      .secondary_contact {
+      }
+    }
+  }
 }

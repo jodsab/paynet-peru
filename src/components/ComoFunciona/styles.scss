@@ -1,0 +1,104 @@
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+
+.how--container--info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .how--steps--container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .how--step--container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      video {
+        width: 100%;
+        height: 200px;
+      }
+      .how--step--layout {
+        flex: 1;
+        .how--step--buttons {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .how--slide--container {
+    display: flex;
+    flex-direction: column;
+    .option {
+      padding: 10px;
+      background-color: rgba(#52adeb, 0.2);
+      display: flex;
+      justify-content: center;
+      color: $primary;
+      cursor: pointer;
+      &.active {
+        background-color: $secondary;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .how--container--info {
+    padding: 40px;
+    .how--steps--container {
+      .how--step--container {
+        video {
+          width: 50%;
+          height: 340px;
+        }
+        .how--step--layout {
+          P {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) {
+  .how--container--info {
+    padding: 20px;
+
+    .how--slide--container {
+      flex-direction: row;
+      font-size: 20px;
+      .option {
+        &:first-of-type {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        &:last-of-type {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+    .how--steps--container {
+      .how--step--container {
+        align-items: center;
+        flex-direction: row;
+        video {
+          width: 50%;
+          height: 330px;
+        }
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+        }
+        .how--step--layout {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

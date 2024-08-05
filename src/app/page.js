@@ -11,6 +11,8 @@ import seguro from "./assets/seguro.png";
 import comodo from "./assets/comodo.png";
 import accesible from "./assets/accesible.png";
 import human from "./assets/human.png";
+import FormContact from "./funcionamiento/components/FormContact";
+import ComoFunciona from "@/components/ComoFunciona";
 
 import "./index.scss";
 
@@ -25,7 +27,7 @@ export default function Home() {
               <div className="top_border">
                 <p className="subtitle">Pagos fáciles y seguros</p>
                 <div className="fixed">
-                  <Image width={150} height={"100%"} src={human} alt="human" />
+                  <Image width={350} height={"100%"} src={human} alt="human" />
                 </div>
               </div>
               <div className="buttons">
@@ -39,6 +41,8 @@ export default function Home() {
             </WithBorder>
             <Beneficios />
             <TablaDeComisiones />
+            <ComoFunciona />
+            <FormContact />
           </div>
         </div>
       </WithNavAndFooter>

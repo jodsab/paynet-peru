@@ -13,6 +13,7 @@ ul {
 button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .margin {
@@ -106,7 +107,7 @@ ul {
 
 @media screen and (min-width: $desktop) {
   h1 {
-    font-size: 120px;
+    font-size: 80px;
   }
 
   p {
@@ -135,9 +136,9 @@ ul {
     font-size: 18px;
   }
   .title {
-    font-size: 80px;
+    font-size: 60px;
   }
   .subtitle {
-    font-size: 40px;
+    font-size: 50px;
   }
 }

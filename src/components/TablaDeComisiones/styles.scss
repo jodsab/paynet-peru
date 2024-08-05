@@ -1,4 +1,5 @@
 @import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
 
 .tabla_de_comisiones_container {
   .cards {
@@ -115,6 +116,23 @@
           color: white;
           font-size: 17px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .tabla_de_comisiones_container {
+    .tabla_head {
+      display: flex;
+      gap: 40px;
+    }
+
+    .cards {
+      margin-top: 40px;
+      display: flex;
+      .card {
+        padding: 30px;
       }
     }
   }

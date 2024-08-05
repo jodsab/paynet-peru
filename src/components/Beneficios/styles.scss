@@ -1,27 +1,49 @@
-.benefits {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .sub {
-    font-size: 30px;
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+
+.beneficios_container {
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .sub {
+      font-size: 30px;
+    }
+  }
+  .areas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    .area {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 20px;
+      .suba {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        h6 {
+          font-size: 24px;
+        }
+      }
+    }
   }
 }
-.areas {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  .area {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 20px;
-    .suba {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      h6 {
-        font-size: 24px;
+
+@media screen and (min-width: $tablet) {
+  .beneficios_container {
+    .benefits {
+      position: relative;
+      .img_beneficios {
+        position: absolute;
+        top: -40px;
+        right: 0;
       }
+    }
+    .areas {
+      margin-top: 180px;
+      flex-direction: row;
     }
   }
 }

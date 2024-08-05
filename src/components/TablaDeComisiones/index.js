@@ -6,11 +6,14 @@ const TablaDeComisiones = () => {
   return (
     <WithBorder>
       <div className="tabla_de_comisiones_container">
-        <h2>TABLA DE COMISIONES</h2>
-        <p>
-          Invierte en el crecimiento de tu negocio con nuestras comisiones mas
-          bajas del mercado.
-        </p>
+        <div className="tabla_head">
+          <h3 className="title">TABLA DE COMISIONES</h3>
+          <p>
+            Invierte en el crecimiento de tu negocio con nuestras comisiones mas
+            bajas del mercado.
+          </p>
+        </div>
+
         <div className="cards">
           <div className="card">
             <h2>NEGOCIOS EN ASCENSO</h2>
