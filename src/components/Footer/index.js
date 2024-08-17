@@ -7,6 +7,7 @@ import {
   FaSquareTwitter,
   FaSquareWhatsapp,
 } from "react-icons/fa6";
+import Logo from "../Logo";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import "./styles.scss";
@@ -14,10 +15,14 @@ import "./styles.scss";
 const Footer = () => {
   return (
     <div className="footer--main--container">
-      <h2 className="title-fake">PAYNET</h2>
+      <div className="logo_mobile">
+        <Logo className="blanco" />
+      </div>
       <ul className="footer--about--us--container">
         <li>
-          <h2>PAYNET</h2>
+          <div className="logo_desktop">
+            <Logo className="blanco" />
+          </div>
           <ul className="footer--social--links--container">
             <li>
               <a href="">

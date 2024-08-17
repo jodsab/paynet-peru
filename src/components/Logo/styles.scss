@@ -1,4 +1,5 @@
 @import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
 
 .logo_container {
   a {
@@ -9,10 +10,19 @@
   h3 {
     font-size: 30px;
   }
-  .pay {
-    color: $primary;
+
+  img {
+    object-fit: contain;
   }
-  .net {
-    color: $secondary;
+}
+
+@media screen and (min-width: $tablet) {
+  .logo_container {
+    a {
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
 }

@@ -1,13 +1,27 @@
 import React from "react";
 import Link from "next/link";
+import PayNetOriginal from "./assets/PayNet color.png";
+import PayNetBlanco from "./assets/PayNet blanco.png";
+import PayNetNegro from "./assets/PayNet negro.png";
 import "./styles.scss";
+import Image from "next/image";
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
     <div className="logo_container">
       <Link href="/">
-        <h3 className="pay">PAY</h3>
-        <h3 className="net">NET</h3>
+        <Image
+          width={160}
+          height={160}
+          src={
+            className === "blanco"
+              ? PayNetBlanco
+              : className === "negro"
+              ? PayNetNegro
+              : PayNetOriginal
+          }
+          alt="logo"
+        />
       </Link>
     </div>
   );

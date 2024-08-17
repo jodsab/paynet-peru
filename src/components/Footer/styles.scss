@@ -6,7 +6,10 @@
   align-items: center;
   background: linear-gradient(to right, #4dd4ff 0%, #154979 100%);
   padding: 20px 30px;
-  .title-fake {
+  .logo_desktop {
+    display: block;
+  }
+  .logo_mobile {
     display: none;
   }
   .footer--about--us--container {
@@ -15,8 +18,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     li {
+      width: 90%;
       .footer--social--links--container {
         display: flex;
+        justify-content: space-between;
         gap: 8px;
         cursor: pointer;
         margin-top: 5px;
@@ -54,6 +59,7 @@
 @media (max-width: $tablet) {
   .footer--main--container {
     align-items: center;
+
     .footer--about--us--container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -70,6 +76,14 @@
 @media (max-width: $mobile) {
   .footer--main--container {
     align-items: baseline;
+
+    .logo_desktop {
+      display: none;
+    }
+    .logo_mobile {
+      display: block;
+    }
+
     .title-fake {
       display: block;
       color: white;
@@ -77,6 +91,8 @@
     .footer--about--us--container {
       display: flex;
       flex-direction: column-reverse;
+      align-items: center;
+
       li {
         &:first-child {
           h2 {

@@ -112,11 +112,11 @@ ul {
 
 @media screen and (min-width: $desktop) {
   h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   p {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .content {
@@ -140,10 +140,13 @@ ul {
   .button--container {
     font-size: 18px;
   }
+  p {
+    font-size: 20px;
+  }
   .title {
-    font-size: 60px;
+    font-size: 57px;
   }
   .subtitle {
-    font-size: 50px;
+    font-size: 48px;
   }
 }
