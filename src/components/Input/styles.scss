@@ -10,11 +10,13 @@
     align-items: center;
     height: 30px;
     padding: 10px;
+
     input {
       background-color: transparent;
       outline: none;
       border: none;
       flex: 1;
+      padding: 20px;
     }
   }
 }

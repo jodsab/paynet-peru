@@ -1,5 +1,10 @@
 @import "../resources/globalStyles/colors.scss";
 @import "../resources/globalStyles/mediaQueries.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   box-sizing: border-box;
@@ -103,16 +108,16 @@ ul {
   }
 }
 .title {
-  font-size: 28px;
+  font-size: 25px;
 }
 .subtitle {
-  font-size: 20px;
+  font-size: 19px;
   color: $primary;
 }
 
 @media screen and (min-width: $desktop) {
   h1 {
-    font-size: 70px;
+    font-size: 62px;
   }
 
   p {
@@ -125,7 +130,7 @@ ul {
   }
 }
 
-@media (max-width: $tablet) {
+/* @media (max-width: $tablet) {
   .button--container {
     font-size: 16px;
   }
@@ -135,7 +140,7 @@ ul {
   .subtitle {
     font-size: 25px;
   }
-}
+} */
 @media (min-width: $tablet) {
   .button--container {
     font-size: 18px;

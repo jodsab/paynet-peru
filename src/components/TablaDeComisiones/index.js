@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import WithBorder from "@/HOC/withBorder";
 
-const TablaDeComisiones = () => {
+const TablaDeComisiones = ({ onClick }) => {
   return (
     <WithBorder>
       <div className="tabla_de_comisiones_container">
@@ -55,7 +55,7 @@ const TablaDeComisiones = () => {
               <p className="porcentaje">1.5%</p>
               <p className="text">Incl. IGV por transacción</p>
             </div>
-            <button className="btn_registrarse">
+            <button onClick={onClick} className="btn_registrarse">
               <p>REGISTRARSE</p>
             </button>
           </div>
@@ -99,7 +99,7 @@ const TablaDeComisiones = () => {
               <p className="porcentaje">1%</p>
               <p className="text">Incl. IGV por transacción</p>
             </div>
-            <button className="btn_registrarse">
+            <button onClick={onClick} className="btn_registrarse">
               <p>REGISTRARSE</p>
             </button>
           </div>
@@ -143,7 +143,7 @@ const TablaDeComisiones = () => {
               <p className="porcentaje">0.6%</p>
               <p className="text">Incl. IGV por transacción</p>
             </div>
-            <button className="btn_registrarse">
+            <button onClick={onClick} className="btn_registrarse">
               <p>REGISTRARSE</p>
             </button>
           </div>

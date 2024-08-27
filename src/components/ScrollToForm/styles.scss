@@ -1,0 +1,17 @@
+@import "../../resources/globalStyles/colors.scss";
+@import "../../resources/globalStyles/mediaQueries.scss";
+
+.contactanos_container {
+  .contactanos {
+    background-color: $secondary;
+    padding: 8px 15px;
+    border-radius: 12px;
+    p {
+      color: white;
+      margin: 0;
+    }
+  }
+  .contactanos:hover {
+    opacity: 0.8;
+  }
+}

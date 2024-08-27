@@ -30,6 +30,15 @@
           display: flex;
           gap: 5px;
         }
+        .button--container--secondary {
+          margin-top: 20px;
+          width: 100%;
+        }
+        .error {
+          color: red;
+          font-size: 13px;
+          margin-top: 5px;
+        }
       }
     }
   }

@@ -1,4 +1,5 @@
 "use client";
+import { useRef, useEffect } from "react";
 import Sofa from "../assets/sofa.png";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -6,6 +7,10 @@ import ComoFunciona from "@/components/ComoFunciona";
 import WithBorder from "@/HOC/withBorder";
 import FormContact from "./components/FormContact";
 import WithNavAndFooter from "@/HOC/withNavAndFooter";
+
+import ScrollToForm from "@/components/ScrollToForm";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./index.scss";
 
 const Accordion = ({ content, title }) => {
@@ -25,16 +30,32 @@ const Accordion = ({ content, title }) => {
 };
 
 export default function Funcionamiento() {
+  const sectionRef = useRef(null);
+
+  const scrollToSection = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <main>
-      <WithNavAndFooter>
+      <WithNavAndFooter onClick={scrollToSection}>
         <div className="function--container">
           <div className="function--container--content ">
             <div className="banner--container content">
               <div className="banner--left--container">
-                <strong className="title">CONOCE CÓMO TE AYUDAMOS</strong>
+                <div data-aos="fade-right">
+                  <strong className="title">CONOCE CÓMO TE AYUDAMOS</strong>
+                </div>
                 <div className="banner--buttons--container">
-                  <button
+                  <ScrollToForm onClick={scrollToSection} />
+                  {/*                   <button
                     className="button--container button--container--secondary"
                     type="button"
                   >
@@ -45,17 +66,22 @@ export default function Funcionamiento() {
                     type="button"
                   >
                     Contacto
-                  </button>
+                  </button> */}
                 </div>
               </div>
-              <Image width={320} height={320} src={Sofa} />
+              <div data-aos="fade-left">
+                <Image width={320} height={320} src={Sofa} alt="sofa" />
+              </div>
             </div>
             <div className="how--container">
-              <div className="how--container-content content">
+              <div
+                data-aos="fade-up"
+                className="how--container-content content"
+              >
                 <ComoFunciona />
               </div>
             </div>
-            <div className="function--help--container ">
+            <div data-aos="fade-up" className="function--help--container ">
               <div className="function--help--content--container content">
                 <strong className="title"> PREGUNTAS FRECUENTES</strong>
                 <div className="function--help--accordion">
@@ -121,7 +147,9 @@ export default function Funcionamiento() {
                 </div>
               </div>
             </div>
-            <FormContact />
+            <div ref={sectionRef}>
+              <FormContact />
+            </div>
           </div>
         </div>
       </WithNavAndFooter>

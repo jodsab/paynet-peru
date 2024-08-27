@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./index.scss";
 import BlogCard from "@/components/BlogCard";
 import WithNavAndFooter from "@/HOC/withNavAndFooter";
+import ScrollToForm from "@/components/ScrollToForm";
 
 export default function Blog() {
   return (
@@ -17,7 +18,8 @@ export default function Blog() {
                   Innovación financiera al alcance de tus manos.
                 </p>
                 <div className="blog--banner--buttons">
-                  <button
+                  <ScrollToForm />
+                  {/*                   <button
                     className="button--container button--container--secondary"
                     type="button"
                   >
@@ -28,7 +30,7 @@ export default function Blog() {
                     type="button"
                   >
                     Contacto
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <Image width={400} height={400} src={Stadistics} />

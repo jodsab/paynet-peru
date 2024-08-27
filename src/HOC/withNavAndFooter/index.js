@@ -1,12 +1,14 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 import "./styles.scss";
 
-const WithNavAndFooter = ({ children }) => {
+const WithNavAndFooter = ({ onClick, children }) => {
   return (
     <div>
-      <NavBar />
+      <NavBar onClick={onClick} />
       <div className="body">{children}</div>
       <Footer />
     </div>
