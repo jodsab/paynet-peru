@@ -11,8 +11,8 @@ const Logo = ({ className }) => {
     <div className="logo_container">
       <Link href="/">
         <Image
-          width={160}
-          height={160}
+          width={150}
+          height={150}
           src={
             className === "blanco"
               ? PayNetBlanco

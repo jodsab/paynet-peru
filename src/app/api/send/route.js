@@ -17,7 +17,8 @@ export async function POST(request) {
     const { data, error } = await resend.emails.send({
       from: "PayNet Peru - Admin <admin@paynetperu.com>",
       to: [
-        "camilo.b.q@hotmail.com" /* , email, "alexanderaraujo95@gmail.com" */,
+        "camilo.b.q@hotmail.com",
+        /* email,  */ "alexanderaraujo95@gmail.com",
       ],
       subject: "Gracias por completar el formulario!",
       react: EmailTemplate({ name, email, phone, message, fecha }),
